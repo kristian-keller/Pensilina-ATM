@@ -1,0 +1,131 @@
+body {
+    background-color: #0E1717;
+    margin: 0px;
+    color: darkorange;
+    font-family: Helvetica, Arial, sans-serif
+}
+
+#header {
+    position: relative;
+    width: 100%;
+    height: 70px;
+    background-color: #262e2e; 
+}
+
+#stop_name {
+    position: absolute;
+    right: 0px;
+    padding: 10px;
+    font-size: 40px;
+}
+
+#stop_code {
+    position: absolute;
+    left: 0px;
+    padding: 10px;
+    font-size: 40px;
+}
+
+#lines {
+    text-align: center;
+    font-size: 100px;
+}
+
+.line {
+    position: relative;
+    width: 100%;
+    height: 140px;
+    border-bottom: 2px solid #262e2e;
+}
+
+.line_small {
+    position: relative;
+    width: 100%;
+    height: 70px;
+    border-bottom: 2px solid #262e2e;
+    overflow: hidden;
+}
+
+.line_code {
+    position: absolute;
+    left: 0px;
+    padding: 10px;
+    font-size: 100px;
+    font-family: monospace;
+}
+
+.line_status {
+    position: absolute;
+    right: 0px;
+    padding: 10px;
+    font-size: 100px;
+    text-transform: uppercase;
+    font-family: monospace;
+}
+
+.line_bulletin {
+    position: absolute;
+    left: 0px;
+    padding: 10px;
+    font-size: 40px;
+    font-family: monospace;
+    white-space: nowrap;
+    transform:translateX(5%);
+    animation: scroll_bulletin 60s linear infinite;
+}
+
+@keyframes scroll_bulletin {
+    0% {transform: translateX(5%);}
+    100% {transform: translateX(-100%);}
+}
+
+#stop_code_input {
+    position: absolute;
+    left: 0px;
+    padding: 10px;
+    font-size: 40px;
+    background: none;
+    border: none;
+    margin: 0px;
+    color: darkorange;
+}
+
+#stop_code_button {
+    position: absolute;
+    right: 0px;
+    padding: 10px;
+    font-size: 40px;
+    background: none;
+    border: none;
+    margin: 0px;
+    background-color: darkorange;
+    color: white;
+    height: 70px;
+    width: 150px;
+}
+
+.connection {
+    position: fixed;
+    height: 100px;
+    width: 50%;
+    top: 45%;
+    left: 25%;
+    background-color: darkorange;
+    color: white;
+    font-size: 40px;
+    text-align: center;
+    line-height: 100px;
+    animation: blink 1s infinite;
+}
+
+@keyframes blink {
+    0%   { background-color: darkorange; }
+    50% { background-color: #E34234; }
+    100% { background-color: darkorange; }
+}
+
+@keyframes refresh {
+    0%   { background-color: #0E1717;; }
+    50% { background-color: darkorange; }
+    100% { background-color: #0E1717;; }
+}
